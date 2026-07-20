@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -57,6 +58,11 @@ object ExampleTeamCity : BuildType({
             }
             goals = "clean deploy"
             userSettingsSelection = "settings.xml"
+        }
+    }
+
+    triggers {
+        vcs {
         }
     }
 })
