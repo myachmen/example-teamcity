@@ -35,6 +35,8 @@ project {
 object ExampleTeamCity : BuildType({
     name = "Example TeamCity"
 
+    artifactRules = "target/*.jar"
+
     vcs {
         root(DslContext.settingsRoot)
     }
